@@ -20,19 +20,23 @@ func main() {
 	fmt.Println("slice:", s)
 
 	//slices are like references to arrays. when a slice that is generated from an array is changed, this change affects original array and other slices that is generated from the same array
-	names := [4]string{
+	names := [5]string{
 		"büşra",
 		"furkan",
 		"eren",
 		"yasir",
+        "civan",
 	}
 
 	fmt.Println("names before change:", names)
 	slice1 := names[0:2] //büşra, furkan
 	slice2 := names[1:3] //furkan, eren
+    slice3 := names[5:]  //civan
+    
 
 	slice2[0] = "XXXXXXXX" //before : slice2[0] -> furkan, after : slice2[0] -> XXXXXXXX . this change affects original array and other slices
 	fmt.Printf("Original array :%v | slice1 :%v | slice2 :%v\n", names, slice1, slice2)
+    fmt.Printf("Critical slice :%v", slice3)
 
 	//array and slice definations are a little bit different. Ex. [3]bool{true,true,false} -> array |||| []bool{true,true,false} -> slice
 	//a struct array or slice can be defined like this
