@@ -25,13 +25,13 @@ func main() {
 		"furkan",
 		"eren",
 		"yasir",
-        "civan",
+        	"civan",
 	}
 
 	fmt.Println("names before change:", names)
 	slice1 := names[0:2] //büşra, furkan
 	slice2 := names[1:3] //furkan, eren
-    slice3 := names[5:]  //civan
+    	slice3 := names[5:]  //civan
     
 
 	slice2[0] = "XXXXXXXX" //before : slice2[0] -> furkan, after : slice2[0] -> XXXXXXXX . this change affects original array and other slices
